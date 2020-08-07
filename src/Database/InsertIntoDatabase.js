@@ -21,8 +21,8 @@ module.exports = {
                 console.log('\x1b[31m%s\x1b[0m', "Updating Serial Number and Timestamps.");
 
                 const dataArrayCorrectTime = filteredData.map(item => {
-                    // item.timestamp = moment(dbLastTimeStamp, 'YYYY-MM-DD HH:mm:ss').add(i * secondDifference, 'milliseconds').format('YYYY-MM-DD HH:mm:ss');
-                    item.timestamp = moment().format('YYYY-MM-DD-HH:mm:ss');
+                    item.timestamp = moment(dbLastTimeStamp, 'YYYY-MM-DD HH:mm:ss').add(i * secondDifference, 'milliseconds').format('YYYY-MM-DD HH:mm:ss');
+                    //item.timestamp = moment().format('YYYY-MM-DD-HH:mm:ss');
                     item.serialNumber = dbIdNumber;
                     dbIdNumber++;
                     i++;
